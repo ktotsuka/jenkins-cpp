@@ -8,12 +8,13 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -la'
                 sh 'gcc --version'
-                g++ hello.cpp -o hello
+                sh 'g++ hello.cpp -o hello'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing'
+                sh './hello'
             }
         }
         stage('Deploy') {
