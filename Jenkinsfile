@@ -1,11 +1,14 @@
 /* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { any }
+    agent any
     stages {
         stage('Build') {
             steps {
                 echo 'Building'
-                sh 'g++ hello.cpp -o hello'
+                sh 'pwd'
+                sh 'ls -la'
+                sh 'gcc --version'
+                sh 'g++ --version'
             }
         }
         stage('Test') {
