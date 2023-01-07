@@ -8,7 +8,7 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -la'
                 sh 'gcc --version'
-                sh 'g++ hello.cpp -o hello'
+                g++ hello.cpp -o hello
             }
         }
         stage('Test') {
